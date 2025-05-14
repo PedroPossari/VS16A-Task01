@@ -1,17 +1,7 @@
-import React from "react";
-import styles from "./header.module.scss";
-import NavBar from "../navbar/NavBar";
-
 export default function Header() {
   return (
-    <>
-      <header className={styles.header}>
-        <div className={styles.container}>
-          <div className={styles.logo}>Aqui vai o logo</div> 
-          Aqui vai o header
-        </div>
-        <NavBar/>
-      </header>
-    </>
+    <header style={{ backgroundColor: '#003366', padding: '1rem', color: 'white', textAlign: 'center' }}>
+      <h1>Portal do Vestibular</h1>
+    </header>
   );
 }

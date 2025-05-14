@@ -1,0 +1,168 @@
+:root {
+  --primary-color: #003366;
+  --secondary-color: #0055a5;
+  --highlight-color: #eef5ff;
+  --light-blue: #e0ecff;
+  --light-text: #444;
+  --dark-text: #555;
+  --button-hover-color: #003d7a;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-dark: rgba(0, 0, 0, 0.12);
+  --math-color: #4a6baf;
+  --portuguese-color: #d45d79;
+  --humanities-color: #5aa897;
+  --science-color: #f0a830;
+}
+
+.main {
+  padding: 2rem 4rem;
+  background: linear-gradient(135deg, var(--highlight-color) 0%, var(--light-blue) 100%);
+  min-height: 90vh;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  color: var(--light-text);
+  margin-bottom: 2rem;
+}
+
+.searchBar {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.searchBar input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.searchBar button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.searchBar button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px var(--shadow-dark);
+}
+
+.card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: var(--dark-text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cardButton {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cardButton:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Cores temáticas para cada card */
+.math {
+  border-color: var(--math-color);
+}
+
+.math .icon {
+  color: var(--math-color);
+}
+
+.portuguese {
+  border-color: var(--portuguese-color);
+}
+
+.portuguese .icon {
+  color: var(--portuguese-color);
+}
+
+.humanities {
+  border-color: var(--humanities-color);
+}
+
+.humanities .icon {
+  color: var(--humanities-color);
+}
+
+.science {
+  border-color: var(--science-color);
+}
+
+.science .icon {
+  color: var(--science-color);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem 2rem;
+  }
+}

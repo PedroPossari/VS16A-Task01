@@ -1,5 +1,5 @@
 import React from "react";
-import Start from "./home/page";
+import Start from "./pages/home/page";
 
 export default function Home() {
   return (

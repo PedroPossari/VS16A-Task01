@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #003366;
+  --secondary-color: #0055a5;
+  --accent-color: #eef5ff;
+  --text-color: #333;
+  --card-bg: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  padding: 2rem;
+  background: var(--accent-color);
+  min-height: 80vh;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  width: 300px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card h3 {
+  color: var(--secondary-color);
+}
+
+.card p {
+  color: #444;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
