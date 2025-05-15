@@ -1,17 +1,24 @@
-// components/NavBar.tsx
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./navbar.module.scss";
 import TextMenu from "../textMenu/TextMenu";
 
 export default function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className={styles.navbar}>
-      {" "}
-      {/* Alterado de navContainer para navbar */}
-      <div className={styles.navbar}>
-        {" "}
-        {/* Alterado de menuItems para navbar */}
+      <div className={styles.mobileMenuButton} onClick={toggleMenu}>
+        <span className={styles.hamburgerLine}></span>
+        <span className={styles.hamburgerLine}></span>
+        <span className={styles.hamburgerLine}></span>
+      </div>
+      
+      <div className={`${styles.navItems} ${isMenuOpen ? styles.show : ""}`}>
         <TextMenu texto="Home" href="/" />
         <TextMenu texto="Matérias" href="/pages/menu2" />
         <TextMenu texto="Simulados" href="/pages/menu3" />
