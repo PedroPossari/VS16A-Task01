@@ -1,46 +1,29 @@
-:root {
-  --primary: #0055a5;
-  --dark-blue: #003366;
-  --light-bg: #f0f7ff;
-  --text-muted: #555;
-  --highlight: #ff6b6b;
-  --button-bg: #0077cc;
-  --button-hover-bg: linear-gradient(to right, #004488, #0066aa);
-  --shadow-light: rgba(0, 0, 0, 0.08);
-  --shadow-dark: rgba(0, 85, 165, 0.3);
-  --font-size-lg: 2.8rem;
-  --font-size-md: 1.5rem;
-  --font-size-sm: 1.3rem;
-  --padding-lg: 2rem;
-  --padding-sm: 1rem;
-}
-
 body {
   margin: 0;
   font-family: sans-serif;
-  background: linear-gradient(135deg, var(--light-bg) 0%, #d6e7ff 100%);
+  background: linear-gradient(135deg, #f0f7ff 0%, #d6e7ff 100%);
 }
 
 .main {
-  padding: var(--padding-lg) 4rem;
+  padding: 2rem 4rem;
   min-height: 90vh;
 }
 
 .hero {
   text-align: center;
   margin-bottom: 3rem;
-  padding: var(--padding-lg) 0;
+  padding: 2rem 0;
 }
 
 .hero h1 {
-  font-size: var(--font-size-lg);
-  color: var(--dark-blue);
+  font-size: 2.8rem;
+  color: #003366;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero .subtitle {
-  font-size: var(--font-size-sm);
+  font-size: 1.3rem;
   color: #444;
   margin-bottom: 2rem;
 }
@@ -64,12 +47,12 @@ body {
 .statItem span {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--primary);
+  color: #0055a5;
   display: block;
 }
 
 .statItem p {
-  color: var(--text-muted);
+  color: #555;
   margin-top: 0.5rem;
 }
 
@@ -85,7 +68,7 @@ body {
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 5px 15px var(--shadow-light);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: 0.3s;
   position: relative;
@@ -94,14 +77,14 @@ body {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px var(--shadow-dark);
+  box-shadow: 0 15px 30px rgba(0, 85, 165, 0.3);
 }
 
 .card .badge {
   position: absolute;
   top: 15px;
   right: -30px;
-  background: var(--highlight);
+  background: #ff6b6b;
   color: #fff;
   padding: 0.2rem 2rem;
   transform: rotate(45deg);
@@ -117,13 +100,13 @@ body {
 }
 
 .card h3 {
-  color: var(--dark-blue);
-  font-size: var(--font-size-md);
+  color: #003366;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .card p {
-  color: var(--text-muted);
+  color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -137,15 +120,15 @@ body {
 }
 
 .card .details span {
-  background: var(--light-bg);
+  background: #f0f7ff;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: var(--primary);
+  color: #0055a5;
 }
 
 .cardButton {
-  background: var(--button-bg);
+  background: #0077cc;
   color: #fff;
   border: none;
   padding: 0.8rem 2rem;
@@ -159,23 +142,35 @@ body {
 }
 
 .cardButton:hover {
-  background: var(--button-hover-bg);
+  background: linear-gradient(to right, #004488, #0066aa);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px var(--shadow-dark);
+  box-shadow: 0 5px 15px rgba(0, 85, 165, 0.3);
 }
 
-.card.enem { border-top: 5px solid #4a6baf; }
-.card.enem .icon { color: #4a6baf; }
+.card.enem {
+  border-top: 5px solid #4a6baf;
+}
+.card.enem .icon {
+  color: #4a6baf;
+}
 
-.card.materia { border-top: 5px solid #5aa897; }
-.card.materia .icon { color: #5aa897; }
+.card.materia {
+  border-top: 5px solid #5aa897;
+}
+.card.materia .icon {
+  color: #5aa897;
+}
 
-.card.ranking { border-top: 5px solid #d45d79; }
-.card.ranking .icon { color: #d45d79; }
+.card.ranking {
+  border-top: 5px solid #d45d79;
+}
+.card.ranking .icon {
+  color: #d45d79;
+}
 
 @media (max-width: 768px) {
   .main {
-    padding: var(--padding-lg) var(--padding-sm);
+    padding: 2rem 1rem;
   }
 
   .stats {

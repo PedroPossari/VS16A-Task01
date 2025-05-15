@@ -1,15 +1,6 @@
-:root {
-  --primary-color: #003366;
-  --secondary-color: #0055a5;
-  --accent-color: #eef5ff;
-  --text-color: #333;
-  --card-bg: #fff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-}
-
 .main {
   padding: 2rem;
-  background: var(--accent-color);
+  background: #eef5ff;
   min-height: 80vh;
 }
 
@@ -20,12 +11,12 @@
 
 .hero h2 {
   font-size: 2.5rem;
-  color: var(--primary-color);
+  color: #003366;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: #333;
 }
 
 .features {
@@ -36,17 +27,17 @@
 }
 
 .card {
-  background: var(--card-bg);
+  background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 5px var(--shadow-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 300px;
   transition: 0.3s;
   text-align: center;
 }
 
 .card h3 {
-  color: var(--secondary-color);
+  color: #0055a5;
 }
 
 .card p {

@@ -1,0 +1,57 @@
+// textMenu.module.scss
+.menuItem {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .textLink {
+    color: inherit;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    display: block;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  .linkContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .subMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2a2a2a;
+    min-width: 200px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subLink {
+    padding: 0.8rem 1.2rem;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }

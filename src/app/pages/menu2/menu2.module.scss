@@ -1,22 +1,6 @@
-:root {
-  --primary-color: #003366;
-  --secondary-color: #0055a5;
-  --highlight-color: #eef5ff;
-  --light-blue: #e0ecff;
-  --light-text: #444;
-  --dark-text: #555;
-  --button-hover-color: #003d7a;
-  --shadow-light: rgba(0, 0, 0, 0.08);
-  --shadow-dark: rgba(0, 0, 0, 0.12);
-  --math-color: #4a6baf;
-  --portuguese-color: #d45d79;
-  --humanities-color: #5aa897;
-  --science-color: #f0a830;
-}
-
 .main {
   padding: 2rem 4rem;
-  background: linear-gradient(135deg, var(--highlight-color) 0%, var(--light-blue) 100%);
+  background: linear-gradient(135deg, #eef5ff 0%, #e0ecff 100%);
   min-height: 90vh;
 }
 
@@ -28,14 +12,14 @@
 
 .hero h1 {
   font-size: 2.8rem;
-  color: var(--primary-color);
+  color: #003366;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .hero .subtitle {
   font-size: 1.3rem;
-  color: var(--light-text);
+  color: #444;
   margin-bottom: 2rem;
 }
 
@@ -49,14 +33,14 @@
 .searchBar input {
   flex: 1;
   padding: 1rem;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid #0055a5;
   border-radius: 50px;
   font-size: 1rem;
   outline: none;
 }
 
 .searchBar button {
-  background-color: var(--secondary-color);
+  background-color: #0055a5;
   color: white;
   border: none;
   padding: 0 2rem;
@@ -67,7 +51,7 @@
 }
 
 .searchBar button:hover {
-  background-color: var(--button-hover-color);
+  background-color: #003d7a;
   transform: translateY(-2px);
 }
 
@@ -83,7 +67,7 @@
   background-color: white;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 5px 15px var(--shadow-light);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -92,7 +76,7 @@
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 30px var(--shadow-dark);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card .icon {
@@ -101,21 +85,21 @@
 }
 
 .card h3 {
-  color: var(--primary-color);
+  color: #003366;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .card p {
-  color: var(--dark-text);
+  color: #555;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
 .cardButton {
   background-color: transparent;
-  color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
+  color: #0055a5;
+  border: 2px solid #0055a5;
   padding: 0.6rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -124,41 +108,41 @@
 }
 
 .cardButton:hover {
-  background-color: var(--secondary-color);
+  background-color: #0055a5;
   color: white;
 }
 
 /* Cores temáticas para cada card */
 .math {
-  border-color: var(--math-color);
+  border-color: #4a6baf;
 }
 
 .math .icon {
-  color: var(--math-color);
+  color: #4a6baf;
 }
 
 .portuguese {
-  border-color: var(--portuguese-color);
+  border-color: #d45d79;
 }
 
 .portuguese .icon {
-  color: var(--portuguese-color);
+  color: #d45d79;
 }
 
 .humanities {
-  border-color: var(--humanities-color);
+  border-color: #5aa897;
 }
 
 .humanities .icon {
-  color: var(--humanities-color);
+  color: #5aa897;
 }
 
 .science {
-  border-color: var(--science-color);
+  border-color: #f0a830;
 }
 
 .science .icon {
-  color: var(--science-color);
+  color: #f0a830;
 }
 
 @media (max-width: 768px) {
