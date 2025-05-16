@@ -28,7 +28,7 @@ export const SimpleGallery = ({
     typeof img === 'string' ? { src: img } : img
   );
   
-  const { currentImage, currentIndex, goTo } = useSimpleGallery(
+  const { currentIndex, goTo } = useSimpleGallery(
     normalizedImages.map(img => img.src),
     initialIndex
   );
