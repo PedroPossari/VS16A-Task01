@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./start.module.scss";
+import { LoginGoogleButton } from "../../../components/loginGoogleButton/loginGoogleButton"; 
 
 export default function Start() {
   return (
@@ -11,6 +12,7 @@ export default function Start() {
             Seu destino completo para se preparar para os vestibulares do
             Brasil!
           </p>
+            <LoginGoogleButton />
         </section>
         <section className={styles.features}>
           <div className={styles.card}>

@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import NavBar from "@/components/navbar/NavBar";
-
+import { Providers } from "./provider/provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,12 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <Providers>
         <Header/>
         <NavBar />
         {children}
         <Footer/>
+      </Providers>
       </body>
     </html>
   );

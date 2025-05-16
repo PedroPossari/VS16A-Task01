@@ -24,6 +24,7 @@ export default function NavBar() {
         <TextMenu texto="Simulados" href="/pages/menu3" />
         <TextMenu texto="Quem Somos" href="/pages/quemSomos" />
         <TextMenu texto="Contato" href="/pages/contato" />
+        <TextMenu texto="Redimencionar" href="/pages/testeJanela" />
       </div>
     </nav>
   );
