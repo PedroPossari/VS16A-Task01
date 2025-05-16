@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useGoogleLogin as useGoogleLoginLib } from "@react-oauth/google";
+import { useApi } from "./useApi";
 
 interface GoogleUser {
   name: string;
@@ -13,35 +14,49 @@ export function useGoogleLogin() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  const {
+    data: userInfoData,
+    error: userInfoError,
+    fetchData: fetchUserInfo,
+  } = useApi<GoogleUser>({
+    url: "https://www.googleapis.com/oauth2/v3/userinfo",
+    enabled: false,
+  });
+
+  const { fetchData: sendTokenToBackend } = useApi<void>({
+    url: "/api/google/login",
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    },
+    enabled: false,
+  });
+
   const login = useGoogleLoginLib({
     onSuccess: async (tokenResponse) => {
       if (tokenResponse.access_token) {
         setLoading(true);
         try {
-          const userInfoResponse = await fetch(
-            "https://www.googleapis.com/oauth2/v3/userinfo",
-            {
-              headers: {
-                Authorization: `Bearer ${tokenResponse.access_token}`,
-              },
-            }
-          );
+          await fetchUserInfo({
+            headers: {
+              Authorization: `Bearer ${tokenResponse.access_token}`,
+            },
+          });
 
-          if (!userInfoResponse.ok) {
-            throw new Error("Falha ao obter informações do usuário");
+          if (userInfoError) {
+            throw new Error(userInfoError);
           }
 
-          const userInfo = await userInfoResponse.json();
-          setUser(userInfo);
-          setError(null);
+          if (userInfoData) {
+            setUser(userInfoData);
+            setError(null);
 
-          await fetch("/api/google/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ token: tokenResponse.access_token }),
-          });
+            await sendTokenToBackend({
+              body: JSON.stringify({ token: tokenResponse.access_token }),
+            });
+          }
         } catch (err) {
           setError(err instanceof Error ? err.message : "Falha no login");
         } finally {

@@ -4,6 +4,7 @@ import styles from "./quemSomos.module.scss";
 import Image from "next/image";
 
 export default function QuemSomos() {
+  const images = ["/img/ANA-CEO.jpg", "/img/Carlos.jpg", "/img/Mariana.jpeg"];
   return (
     <main className={styles.quemSomosContainer}>
       <section className={styles.heroSection}>

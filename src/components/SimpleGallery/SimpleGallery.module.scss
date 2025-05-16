@@ -1,0 +1,71 @@
+.simpleGallery {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  .galleryMain {
+    width: 100%;
+    height: 400px;
+
+    .galleryImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .galleryDots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 0;
+    flex-wrap: wrap;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+      border: none;
+      cursor: pointer;
+
+      &.active {
+        background: #333;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .galleryMain {
+      height: 300px;
+    }
+
+    .galleryControls {
+      button {
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .galleryMain {
+      height: 220px;
+    }
+
+    .galleryControls {
+      button {
+        padding: 6px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .galleryDots {
+      .dot {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
